@@ -1,5 +1,6 @@
 #' Return 0 or 1
 #' 
+#' @author Markus Huff
 #' 
 return_0_1 <- function(n)
 {

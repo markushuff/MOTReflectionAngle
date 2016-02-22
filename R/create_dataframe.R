@@ -4,28 +4,30 @@
 #' 
 #' 
 
-create_dataframe <- function(num_rep, angles)
+create_dataframe <- function(min_num_correct,num_rep, angles)
 {
   # initialize dataframe
   for (i in 1:num_rep)
   {
     dat <- crossing(num_rep = 1:num_rep,
-                    angles = c(0, 10, 20, 30))
+                    angles = angles)
     counter <- 0
     dat_tmp <- data.frame()
     while (counter < length(dat$num_rep))
     {
       tmp <- return_0_1(4)
-      print(tmp)
-      if (sum(tmp) > 2)
-         {
-           dat_tmp <- rbind(dat_tmp, tmp);
-           counter <- counter + 1
-         }
+#      print(tmp)
+      if (sum(tmp) >= min_num_correct)
+      {
+        dat_tmp <- rbind(dat_tmp, tmp)
+        counter <- counter + 1
+      }
       else
         dat_tmp <- dat_tmp
       
     }
+    names(dat_tmp) <- c("t0", "t1", "t2", "t3")
+    dat <- cbind(dat, dat_tmp)
   }
   return(dat)
 }
