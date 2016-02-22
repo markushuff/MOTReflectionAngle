@@ -3,12 +3,29 @@
 #' @author Markus Huff
 #' 
 #' 
-create_dataframe <- function(num_rep,angles)
+
+create_dataframe <- function(num_rep, angles)
 {
   # initialize dataframe
-  for(i in 1:num_rep)
+  for (i in 1:num_rep)
   {
-    dat <- crossing(num_rep=1:num_rep,angles=c(0,10,20,30),t0=return_0_1(),t1=return_0_1(),t2=return_0_1(),t3=return_0_1())
+    dat <- crossing(num_rep = 1:num_rep,
+                    angles = c(0, 10, 20, 30))
+    counter <- 0
+    dat_tmp <- data.frame()
+    while (counter < length(dat$num_rep))
+    {
+      tmp <- return_0_1(4)
+      print(tmp)
+      if (sum(tmp) > 2)
+         {
+           dat_tmp <- rbind(dat_tmp, tmp);
+           counter <- counter + 1
+         }
+      else
+        dat_tmp <- dat_tmp
+      
+    }
   }
   return(dat)
 }
@@ -24,16 +41,16 @@ create_dataframe <- function(num_rep,angles)
 # 2. 15 trials angle == 0
 # 3. Beginn staircase
 # 4. 5 trials (mean_performance), 
-if (mean_performance >= 2.5)
-{
-  
-}
-
-n <- 20
-mean_crit <- 2.5
-
-for(i in 1:n)
-{
-  mean_tmp <- 
-    dat_tmp <- data.frame(angle=0,)
-}
+# if (mean_performance >= 2.5)
+# {
+#   
+# }
+# 
+# n <- 20
+# mean_crit <- 2.5
+# 
+# for(i in 1:n)
+# {
+#   mean_tmp <- 
+#     dat_tmp <- data.frame(angle=0,)
+# }

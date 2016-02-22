@@ -1,0 +1,12 @@
+Package: MOTReflectionAngle
+Type: Package
+Title: MOTReflectionAngle
+Version: 0.1
+Date: 2016-02-22
+Author: Markus Huff
+Maintainer: Markus Huff <markus.huff@gmail.com>
+Description: This R-package allows the simulation of MOT performance with dynamic refraction angles.
+License: Copyfree
+Imports: tidyr
+LazyData: TRUE
+RoxygenNote: 5.0.1
