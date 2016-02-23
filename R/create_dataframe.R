@@ -2,15 +2,16 @@
 #' 
 #' @author Markus Huff
 #' 
-#' @param n Number of target items
+#' @param n Number of target items (not implemented yet, n = 4)
 #' @param min_num_correct Minimum number of correct tracked objects
 #' @param num_rep Number of repetitions / simulations
 #' @param angles Reflection angles (not implemented yet)
 #' @param p_t1 Probability of selecting target 1 (singleton) 
+#' @description This function creates a dataframe with the simulated MOT performance of n targets.   
 #' 
 #' @export
 
-create_dataframe <- function(n,min_num_correct,num_rep, angles,p_t1)
+create_dataframe <- function(n,min_num_correct,num_rep, angles,p_t0)
 {
   # initialize dataframe
   for (i in 1:num_rep)
@@ -21,7 +22,7 @@ create_dataframe <- function(n,min_num_correct,num_rep, angles,p_t1)
     dat_tmp <- data.frame()
     while (counter < length(dat$num_rep))
     {
-      tmp <- return_0_1(4)
+      tmp <- return_0_1(n,p_t0)
 #      print(tmp)
       if (sum(tmp) >= min_num_correct)
       {
