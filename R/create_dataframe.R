@@ -2,9 +2,15 @@
 #' 
 #' @author Markus Huff
 #' 
+#' @param n Number of target items
+#' @param min_num_correct Minimum number of correct tracked objects
+#' @param num_rep Number of repetitions / simulations
+#' @param angles Reflection angles (not implemented yet)
+#' @param p_t1 Probability of selecting target 1 (singleton) 
+#' 
 #' @export
 
-create_dataframe <- function(min_num_correct,num_rep, angles)
+create_dataframe <- function(n,min_num_correct,num_rep, angles,p_t1)
 {
   # initialize dataframe
   for (i in 1:num_rep)

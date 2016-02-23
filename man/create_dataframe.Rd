@@ -4,7 +4,18 @@
 \alias{create_dataframe}
 \title{Create dataframe}
 \usage{
-create_dataframe(min_num_correct, num_rep, angles)
+create_dataframe(n, min_num_correct, num_rep, angles, p_t1)
+}
+\arguments{
+\item{n}{Number of target items}
+
+\item{min_num_correct}{Minimum number of correct tracked objects}
+
+\item{num_rep}{Number of repetitions / simulations}
+
+\item{angles}{Reflection angles (not implemented yet)}
+
+\item{p_t1}{Probability of selecting target 1 (singleton)}
 }
 \description{
 Create dataframe

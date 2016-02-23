@@ -4,7 +4,7 @@
 \alias{return_0_1}
 \title{Return 0 or 1}
 \usage{
-return_0_1(n)
+return_0_1(n = 4, p_t1 = 0.5)
 }
 \description{
 Return 0 or 1
