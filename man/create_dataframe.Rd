@@ -4,7 +4,7 @@
 \alias{create_dataframe}
 \title{Create dataframe}
 \usage{
-create_dataframe(num_rep, angles)
+create_dataframe(min_num_correct, num_rep, angles)
 }
 \description{
 Create dataframe

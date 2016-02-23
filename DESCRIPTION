@@ -10,3 +10,6 @@ License: Copyfree
 Imports: tidyr
 LazyData: TRUE
 RoxygenNote: 5.0.1
+Collate:
+    'create_dataframe.R'
+    'return_0_1.R'

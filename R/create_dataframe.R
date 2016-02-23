@@ -2,7 +2,7 @@
 #' 
 #' @author Markus Huff
 #' 
-#' 
+#' @export
 
 create_dataframe <- function(min_num_correct,num_rep, angles)
 {

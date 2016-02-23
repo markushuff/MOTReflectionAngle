@@ -9,4 +9,7 @@ return_0_1(n)
 \description{
 Return 0 or 1
 }
+\author{
+Markus Huff
+}
 
