@@ -4,8 +4,8 @@ R-package for simulating MOT (Pylyshyn & Storm, 1988) performance of a set of pa
 
 ## Binaries
 
-[Version 0.1](https://www.dropbox.com/s/0eofu99wbct3xet/MOTReflectionAngle_0.1.tgz?dl=0)
-[Version 0.1](https://www.dropbox.com/s/ovlabblpryjw6q1/MOTReflectionAngle_0.2.tgz?dl=0)
+- [Version 0.1](https://www.dropbox.com/s/0eofu99wbct3xet/MOTReflectionAngle_0.1.tgz?dl=0)
+- [Version 0.2](https://www.dropbox.com/s/ovlabblpryjw6q1/MOTReflectionAngle_0.2.tgz?dl=0)
 
 
 ## References
