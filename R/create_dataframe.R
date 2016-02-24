@@ -6,7 +6,7 @@
 #' @param min_num_correct Minimum number of correct tracked objects
 #' @param num_rep Number of repetitions / simulations
 #' @param angles Reflection angles (not implemented yet)
-#' @param p_t1 Probability of selecting target 1 (singleton) 
+#' @param p_t0 Probability of selecting target 1 (singleton) 
 #' @description This function creates a dataframe with the simulated MOT performance of n targets.   
 #' 
 #' @export
