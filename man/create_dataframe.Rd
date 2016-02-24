@@ -4,9 +4,11 @@
 \alias{create_dataframe}
 \title{Create dataframe}
 \usage{
-create_dataframe(n, min_num_correct, num_rep, angles, p_t0)
+create_dataframe(num_participants, n, min_num_correct, num_rep, angles, p_t0)
 }
 \arguments{
+\item{num_participants}{Number of participants}
+
 \item{n}{Number of target items (not implemented yet, n = 4)}
 
 \item{min_num_correct}{Minimum number of correct tracked objects}
@@ -15,7 +17,7 @@ create_dataframe(n, min_num_correct, num_rep, angles, p_t0)
 
 \item{angles}{Reflection angles (not implemented yet)}
 
-\item{p_t1}{Probability of selecting target 1 (singleton)}
+\item{p_t0}{Probability of selecting target 1 (singleton)}
 }
 \description{
 This function creates a dataframe with the simulated MOT performance of n targets.

@@ -2,6 +2,7 @@
 #' 
 #' @author Markus Huff
 #' 
+#' @param num_participants Number of participants
 #' @param n Number of target items (not implemented yet, n = 4)
 #' @param min_num_correct Minimum number of correct tracked objects
 #' @param num_rep Number of repetitions / simulations
@@ -11,34 +12,44 @@
 #' 
 #' @export
 
-create_dataframe <- function(n,min_num_correct,num_rep, angles,p_t0)
-{
-  # initialize dataframe
-  for (i in 1:num_rep)
-  {
-    dat <- crossing(num_rep = 1:num_rep,
-                    angles = angles)
-    counter <- 0
-    dat_tmp <- data.frame()
-    while (counter < length(dat$num_rep))
-    {
-      tmp <- return_0_1(n,p_t0)
-#      print(tmp)
-      if (sum(tmp) >= min_num_correct)
-      {
-        dat_tmp <- rbind(dat_tmp, tmp)
-        counter <- counter + 1
-      }
-      else
-        dat_tmp <- dat_tmp
-      
-    }
-    names(dat_tmp) <- c("t0", "t1", "t2", "t3")
-    dat <- cbind(dat, dat_tmp)
-  }
-  return(dat)
-}
 
+create_dataframe <-
+  function(num_participants,
+           n,
+           min_num_correct,
+           num_rep,
+           angles,
+           p_t0)
+  {
+    # initialize dataframe
+    for (i in 1:num_rep)
+    {
+      dat <-
+        crossing(
+          participant = 1:num_participants,
+          num_rep = 1:num_rep,
+          angles = angles
+        )
+      counter <- 0
+      dat_tmp <- data.frame()
+      while (counter < length(dat$num_rep))
+      {
+        tmp <- return_0_1(n, p_t0)
+        #      print(tmp)
+        if (sum(tmp) >= min_num_correct)
+        {
+          dat_tmp <- rbind(dat_tmp, tmp)
+          counter <- counter + 1
+        }
+        else
+          dat_tmp <- dat_tmp
+        
+      }
+      names(dat_tmp) <- c("t0", "t1", "t2", "t3")
+      dat <- cbind(dat, dat_tmp)
+    }
+    return(dat)
+  }
 
 # max trials: 120
 # if angle == 0, dann p(t0) == p(t1) == p(t2) == p(t3)
